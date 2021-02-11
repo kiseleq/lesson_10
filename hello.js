@@ -6,9 +6,11 @@ blocks[3].before(blocks[4]);
 const imgNew = document.getElementsByTagName('body');                       // пункт 2
 imgNew[0].style.backgroundImage = "url('image/you-dont-know-js.jpg')";
 
-const h42 = blocks[4].getElementsByTagName('h2');               // пункт 3
+const h42 = blocks[4].querySelector('h2 a');               // пункт 3
 console.log(h42);
-h42[0].replaceWith('Книга 3. this и Прототипы Объектов');
+console.dir(h42);
+
+h42.textContent = 'Книга 3. this и Прототипы Объектов';
 
 const ad = document.querySelector('.adv');  // пункт 4
 ad.remove();
